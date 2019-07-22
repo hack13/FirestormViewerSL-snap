@@ -30,7 +30,14 @@ parts:
     plugin: dump
     source: scripts
   
+  enable-i386:
+    plugin: nil
+    prepare: |
+      dpkg --add-architecture i386
+      apt-get update
+
   viewer:
+    after: [enable-i386]
     plugin: nil
     stage-packages:
       - libgl1-mesa-dri
