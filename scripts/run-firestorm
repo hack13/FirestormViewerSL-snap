@@ -1,0 +1,13 @@
+#!/bin/bash
+export LIBGL_DRIVERS_PATH=$SNAP/usr/lib/x86_64-linux-gnu/dri
+
+# Navigate Into SNAP's Directory
+cd $SNAP_USER_DATA
+
+# Check If Downloaded
+if [ ! -d "Phoenix_Firestorm-releasex64_x86_64_6.2.4.57588" ]; then
+    $SNAP/download-firestorm.py
+fi
+
+# Run Firestorm
+$SNAP/Phoenix_Firestorm-releasex64_x86_64_6.2.4.57588/firestorm
