@@ -1,5 +1,5 @@
 name: test-firestormviewer
-version: '1.1'
+version: '1.1.1'
 summary: A SecondLife Viewer
 description: |
   An app to login and view virtual worlds like
@@ -43,6 +43,11 @@ parts:
       - libgl1-mesa-dri
       - libgl1-mesa-glx
       - libglu1-mesa
+      - libopenal1
+      - libopenal-dev
+      - libalut0
+      - libpulse0
+      - libalut-dev
       - libidn11:i386
       - libstdc++6:i386
       - libuuid1:i386
