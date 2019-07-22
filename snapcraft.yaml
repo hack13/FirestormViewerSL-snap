@@ -1,0 +1,17 @@
+name: test-firestormviewer
+version: 1.0
+summary: A SecondLife Viewer
+description: |
+  An app to login and view virtual worlds like
+  SecondLife and OpenSimulator
+confinement: devmode
+base: core18
+
+parts:
+  test-firestormviewer:
+    plugin: dump
+    source: http://downloads.firestormviewer.org/linux/Phoenix_Firestorm-releasex64_x86_64_6.2.4.57588.tar.xz
+
+apps:
+  test-firestormviewer:
+    command: firestorm
