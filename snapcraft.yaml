@@ -7,7 +7,7 @@ description: |
 architectures:
   - amd64
 
-grade: edge
+grade: devel
 confinement: devmode
 base: core18
 
