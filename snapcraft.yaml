@@ -46,7 +46,7 @@ parts:
       - libstdc++6:i386
       - libuuid1:i386
       - zlib1g:i386
-      - gstreamer0.10-pulseaudio:i386
+      - gstreamer1.0-pulseaudio:i386
       - pepperflashplugin-nonfree
       - libnss3:i386
       - libnspr4:i386
