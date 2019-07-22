@@ -1,5 +1,5 @@
 name: test-firestormviewer
-version: 1.0
+version: '1.0'
 summary: A SecondLife Viewer
 description: |
   An app to login and view virtual worlds like
