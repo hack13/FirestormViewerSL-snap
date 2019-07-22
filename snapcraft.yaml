@@ -34,7 +34,6 @@ parts:
     plugin: nil
     override-build: |
       dpkg --add-architecture i386
-      add-apt-repository "deb http://archive.canonical.com/ $(lsb_release -sc) partner"
       apt update
 
   viewer:
