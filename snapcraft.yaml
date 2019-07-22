@@ -1,17 +1,54 @@
 name: test-firestormviewer
-version: '1.0'
+version: '1.1'
 summary: A SecondLife Viewer
 description: |
   An app to login and view virtual worlds like
   SecondLife and OpenSimulator
+architectures:
+  - amd64
+
+grade: edge
 confinement: devmode
 base: core18
 
-parts:
-  test-firestormviewer:
-    plugin: dump
-    source: http://downloads.firestormviewer.org/linux/Phoenix_Firestorm-releasex64_x86_64_6.2.4.57588.tar.xz
-
 apps:
   test-firestormviewer:
-    command: firestorm
+    command: desktop-launch $SNAP/run-firestorm
+    plugs:
+      - x11
+      - network
+      - opengl
+      - pulseaudio
+      - wayland
+      - desktop
+      - desktop-legacy
+      - browser-support
+      - home
+
+parts:
+  launcher:
+    plugin: dump
+    source: scripts
+  
+  viewer:
+    plugin: nil
+    stage-packages:
+      - libgl1-mesa-dri
+      - libidn11:i386
+      - libstdc++6:i386
+      - libuuid1:i386
+      - zlib1g:i386
+      - gstreamer0.10-pulseaudio:i386
+      - pepperflashplugin-nonfree
+      - libnss3:i386
+      - libnspr4:i386
+      - libxtst6:i386
+      - libgconf-2-4:i386
+      - libxss1:i386
+      - x11-xserver-utils
+      - libxss1
+      - libcurl3
+      - python3-gi
+      - python3-gi-cairo
+      - python3-cario
+      - xz-utils
