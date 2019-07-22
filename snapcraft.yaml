@@ -13,7 +13,7 @@ base: core18
 
 apps:
   test-firestormviewer:
-    command: desktop-launch $SNAP/run-firestorm
+    command: run-firestorm
     plugs:
       - x11
       - network
@@ -34,6 +34,7 @@ parts:
     plugin: nil
     override-build: |
       dpkg --add-architecture i386
+      add-apt-repository "deb http://archive.canonical.com/ $(lsb_release -sc) partner"
       apt update
 
   viewer:
@@ -42,6 +43,7 @@ parts:
     stage-packages:
       - libgl1-mesa-dri
       - libgl1-mesa-glx
+      - libglu1-mesa
       - libidn11:i386
       - libstdc++6:i386
       - libuuid1:i386

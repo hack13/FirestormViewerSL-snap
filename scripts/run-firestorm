@@ -10,4 +10,4 @@ if [ ! -d "Phoenix_Firestorm-releasex64_x86_64_6.2.4.57588" ]; then
 fi
 
 # Run Firestorm
-$SNAP/Phoenix_Firestorm-releasex64_x86_64_6.2.4.57588/firestorm
+$SNAP_USER_DATA/Phoenix_Firestorm-releasex64_x86_64_6.2.4.57588/firestorm
