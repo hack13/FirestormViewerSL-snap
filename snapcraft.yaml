@@ -32,15 +32,16 @@ parts:
   
   enable-i386:
     plugin: nil
-    prepare: |
+    override-build: |
       dpkg --add-architecture i386
-      apt-get update
+      apt update
 
   viewer:
     after: [enable-i386]
     plugin: nil
     stage-packages:
       - libgl1-mesa-dri
+      - libgl1-mesa-glx
       - libidn11:i386
       - libstdc++6:i386
       - libuuid1:i386
