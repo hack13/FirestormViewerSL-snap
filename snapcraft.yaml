@@ -58,5 +58,5 @@ parts:
       - libcurl3
       - python3-gi
       - python3-gi-cairo
-      - python3-cario
+      - python3-cairo
       - xz-utils
