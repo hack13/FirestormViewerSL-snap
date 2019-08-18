@@ -45,15 +45,29 @@ parts:
       - libgl1-mesa-glx
       - libglu1-mesa
       - libopenal1
+      - libopenal1:i386
       - libopenal-dev
+      - libgstreamer-plugins-base1.0-0
       - libalut0
       - libpulse0
+      - libgstreamer1.0-0
       - libalut-dev
       - libidn11:i386
       - libstdc++6:i386
       - libuuid1:i386
       - zlib1g:i386
       - gstreamer1.0-pulseaudio:i386
+      - gstreamer1.0-pulseaudio
+      - gstreamer1.0-plugins-base:i386
+      - gstreamer1.0-plugins-base
+      - gstreamer1.0-plugins-good:i386
+      - gstreamer1.0-plugins-good
+      - gstreamer1.0-plugins-ugly:i386
+      - gstreamer1.0-plugins-ugly
+      - gstreamer1.0-plugins-bad:i386
+      - gstreamer1.0-plugins-bad
+      - gstreamer1.0-alsa:i386
+      - gstreamer1.0-alsa
       - pepperflashplugin-nonfree
       - libnss3:i386
       - libnspr4:i386
